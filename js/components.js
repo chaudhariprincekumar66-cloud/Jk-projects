@@ -23,6 +23,6 @@
   });
 
   document.querySelectorAll(".bottom-nav").forEach((nav) => {
-    nav.innerHTML = items.map((item) => '<a href="' + item.href + '" data-i18n="' + item.label + '"' + (item.id === active ? ' aria-current="page"' : '') + '>' + svg(item.icon) + '<span>' + item.label[0].toUpperCase() + item.label.slice(1) + '</span></a>').join("");
+    nav.innerHTML = items.map((item) => '<a href="' + item.href + '"' + (item.id === active ? ' aria-current="page"' : '') + '>' + svg(item.icon) + '<span data-i18n="' + item.label + '">' + item.label[0].toUpperCase() + item.label.slice(1) + '</span></a>').join("");
   });
 })();

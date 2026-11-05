@@ -468,17 +468,19 @@ select {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
+  
   bottom: 0;
   width: 100%;
   max-width: var(--max);
-  height: var(--nav-h);
+  height: 50px;
+  /* height: var(--nav-h); */
   background: #fff;
   border-top: 1px solid var(--border);
   display: flex;
   align-items: stretch;
-  padding: 8px 12px 28px;
+  /* padding: 8px 12px 12px; */
   z-index: 50;
-  
+
 }
 
 .bottom-nav a {
@@ -493,11 +495,19 @@ select {
   font-size: 12px;
   font-weight: 500;
 }
-
 .bottom-nav a svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    fill: none;
+    flex-shrink: 0;
+    z-index: 2000;
+}
+/* .bottom-nav a svg {
   width: 24px;
   height: 24px;
-}
+} */
 
 .bottom-nav a.active {
   color: var(--green);
@@ -2002,3 +2012,4 @@ select {
     transition-duration: 0.01ms !important;
   }
 }
+
