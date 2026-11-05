@@ -21,7 +21,7 @@
       save.disabled = false;
       edit.disabled = true;
       fields[0].focus();
-      status.textContent = "Edit your details and save them on this device.";
+      status.textContent = window.JK.t("editDetailsNotice");
     });
     personalForm.addEventListener("submit", (event) => {
       event.preventDefault();
@@ -31,14 +31,15 @@
       fields.forEach((field) => { field.disabled = true; });
       save.disabled = true;
       edit.disabled = false;
-      status.textContent = "Saved on this device. Account syncing is not connected.";
+      status.textContent = window.JK.t("localSaveNotice");
     });
   }
 
   const languageForm = byId("language-form");
   if (languageForm) {
     const options = Array.from(languageForm.querySelectorAll("[data-language-option]"));
-    const selected = (window.JK && window.JK.lang() === "gu") ? "gu" : "en";
+    const currentLanguage = window.JK ? window.JK.lang() : "en";
+    const selected = ["en", "gu", "hi"].includes(currentLanguage) ? currentLanguage : "en";
     const setSelected = (value) => {
       options.forEach((option) => {
         const input = option.querySelector("input");
@@ -57,7 +58,7 @@
       if (window.JK) window.JK.setLang(choice.value);
       setSelected(choice.value);
       const status = byId("language-status");
-      status.textContent = choice.value === "gu" ? "ગુજરાતી ભાષા પસંદગી સાચવાઈ." : "Language preference saved.";
+      status.textContent = window.JK ? window.JK.t("languageSaved") : "Language preference saved.";
       status.classList.add("show");
     });
   }
@@ -75,7 +76,7 @@
     const applyReadState = (card, isRead) => {
       card.dataset.read = String(isRead);
       card.classList.toggle("is-unread", !isRead);
-      card.setAttribute("aria-label", card.querySelector("h3").textContent + (isRead ? ", read" : ", unread"));
+      card.setAttribute("aria-label", card.querySelector("h3").textContent + ", " + window.JK.t(isRead ? "readState" : "unreadState"));
     };
     cards.forEach((card) => applyReadState(card, readIds.includes(card.dataset.notification)));
     const markAll = byId("mark-all-read");
@@ -85,7 +86,7 @@
       localStorage.setItem(readKey, JSON.stringify(readIds));
       cards.forEach((card) => applyReadState(card, true));
       markAll.disabled = true;
-      status.textContent = "Preview notifications marked as read on this device.";
+      status.textContent = window.JK.t("readPreviewNotice");
       status.classList.add("show");
     });
     markAll.disabled = cards.every((card) => card.dataset.read === "true");
@@ -96,7 +97,7 @@
     supportForm.addEventListener("submit", (event) => {
       event.preventDefault();
       const status = byId("support-status");
-      status.textContent = "Your request has not been sent. Support form delivery is not connected yet.";
+      status.textContent = window.JK.t("supportNotSent");
       status.classList.add("show");
     });
   }

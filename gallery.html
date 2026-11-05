@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gallery | Shree Jageshwar</title>
+  <title data-i18n="galleryTitle">Gallery | Shree Jageshwar</title>
   <meta name="description" content="Browse the work and products of Shree Jageshwar Welding and Agriculture." />
   <link rel="icon" href="assets/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,11 +12,11 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body data-page="gallery">
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main" data-i18n="skipContent">Skip to content</a>
   <div class="app">
     <header class="site-header">
       <a class="brand" href="index.html">
-        <img src="assets/logo.png" width="82" height="62" alt="Shree Jageshwar Welding and Agriculture logo" />
+        <img src="assets/logo.png" width="82" height="62" alt="Shree Jageshwar Welding and Agriculture logo" data-i18n-alt="logoAlt" />
         <div class="brand-copy">
           <p class="brand-name">SHREE JAGESHWAR</p>
           <p class="brand-sub" data-i18n="brandSub">Welding and Agriculture</p>
@@ -32,14 +32,14 @@
         <p data-i18n="galleryLead">Explore our products and workshop.</p>
       </div>
 
-      <section class="gallery gallery-grid" data-gallery-grid data-card-count="100" role="list" aria-label="Gallery photos"></section>
+      <section class="gallery gallery-grid" data-gallery-grid data-card-count="100" role="list" aria-label="Gallery photos" data-i18n-aria-label="galleryPhotos"></section>
     </main>
 
     <nav class="bottom-nav" aria-label="Mobile"></nav>
   </div>
 
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Gallery photo preview">
-    <button class="lightbox-close" type="button" aria-label="Close photo preview">×</button>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Gallery photo preview" data-i18n-aria-label="galleryPhotoPreview">
+    <button class="lightbox-close" type="button" aria-label="Close photo preview" data-i18n-aria-label="closePhotoPreview">×</button>
     <img alt="" />
   </div>
 

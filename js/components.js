@@ -19,10 +19,12 @@
   const svg = (name) => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + icons[name] + '</svg>';
 
   document.querySelectorAll(".desktop-nav").forEach((nav) => {
+    nav.setAttribute("data-i18n-aria-label", "primaryNav");
     nav.innerHTML = items.map((item) => '<a href="' + item.href + '" data-i18n="' + item.label + '"' + (item.id === active ? ' aria-current="page"' : '') + '>' + item.label[0].toUpperCase() + item.label.slice(1) + '</a>').join("");
   });
 
   document.querySelectorAll(".bottom-nav").forEach((nav) => {
+    nav.setAttribute("data-i18n-aria-label", "mobileNav");
     nav.innerHTML = items.map((item) => '<a href="' + item.href + '"' + (item.id === active ? ' aria-current="page"' : '') + '>' + svg(item.icon) + '<span data-i18n="' + item.label + '">' + item.label[0].toUpperCase() + item.label.slice(1) + '</span></a>').join("");
   });
 })();

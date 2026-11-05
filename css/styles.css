@@ -472,13 +472,13 @@ select {
   bottom: 0;
   width: 100%;
   max-width: var(--max);
-  height: 50px;
+  height: 60px;
   /* height: var(--nav-h); */
   background: #fff;
   border-top: 1px solid var(--border);
   display: flex;
   align-items: stretch;
-  /* padding: 8px 12px 12px; */
+  padding: 8px 12px 12px;
   z-index: 50;
 
 }

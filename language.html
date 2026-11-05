@@ -2,20 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Language Settings | Shree Jageshwar</title><link rel="icon" href="assets/logo.png" />
+  <title data-i18n="languageTitle">Language Settings | Shree Jageshwar</title><link rel="icon" href="assets/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" /><link rel="stylesheet" href="css/styles.css" />
 </head>
 <body data-page="language">
-  <a class="skip-link" href="#main">Skip to content</a><div class="app">
-    <header class="site-header elevated subpage-header"><a class="icon-btn back-link" href="profile.html" aria-label="Back to Profile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6M9 12h12"/></svg></a><span class="header-page-title">Language Settings</span><span class="header-spacer" aria-hidden="true"></span></header>
-    <main id="main"><section class="account-hero"><div class="crumb"><span class="bar"></span><span>PREFERENCES</span></div><h1>Language Settings</h1><p>Choose your preferred language.</p></section>
+  <a class="skip-link" href="#main" data-i18n="skipContent">Skip to content</a><div class="app">
+    <header class="site-header elevated subpage-header"><a class="icon-btn back-link" href="profile.html" aria-label="Back to Profile" data-i18n-aria-label="backProfile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6M9 12h12"/></svg></a><span class="header-page-title" data-i18n="languageTitle">Language Settings</span><span class="header-spacer" aria-hidden="true"></span></header>
+    <main id="main"><section class="account-hero"><div class="crumb"><span class="bar"></span><span data-i18n="preferences">PREFERENCES</span></div><h1 data-i18n="languageTitle">Language Settings</h1><p data-i18n="languageLead">Choose your preferred language.</p></section>
       <form class="account-body language-form" id="language-form">
-        <fieldset class="language-fieldset"><legend class="support-title">Select language</legend>
-          <label class="lang-option" data-language-option="en"><span class="language-symbol" aria-hidden="true">A</span><span><strong>English</strong><small>English</small></span><input class="radio-input" type="radio" name="language" value="en" /><span class="radio" aria-hidden="true"></span></label>
-          <label class="lang-option" data-language-option="gu"><span class="language-symbol" aria-hidden="true">અ</span><span><strong>ગુજરાતી</strong><small>Gujarati</small></span><input class="radio-input" type="radio" name="language" value="gu" /><span class="radio" aria-hidden="true"></span></label>
+        <fieldset class="language-fieldset"><legend class="support-title" data-i18n="selectLanguage">Select language</legend>
+          <label class="lang-option" data-language-option="en"><span class="language-symbol" aria-hidden="true">A</span><span><strong data-i18n="englishName">English</strong><small data-i18n="englishName">English</small></span><input class="radio-input" type="radio" name="language" value="en" /><span class="radio" aria-hidden="true"></span></label>
+          <label class="lang-option" data-language-option="gu"><span class="language-symbol" aria-hidden="true">અ</span><span><strong data-i18n="gujaratiName">ગુજરાતી</strong><small data-i18n="gujaratiLanguageName">Gujarati</small></span><input class="radio-input" type="radio" name="language" value="gu" /><span class="radio" aria-hidden="true"></span></label>
+          <label class="lang-option" data-language-option="hi"><span class="language-symbol" aria-hidden="true">अ</span><span><strong data-i18n="hindiName">हिन्दी</strong><small data-i18n="hindiLanguageName">Hindi</small></span><input class="radio-input" type="radio" name="language" value="hi" /><span class="radio" aria-hidden="true"></span></label>
         </fieldset>
-        <button class="btn btn-forest btn-block" type="submit">Save Language</button>
+        <button class="btn btn-forest btn-block" type="submit" data-i18n="saveLanguage">Save Language</button>
         <p class="form-status" id="language-status" role="status" aria-live="polite"></p>
       </form>
     </main><nav class="bottom-nav" aria-label="Mobile"></nav>

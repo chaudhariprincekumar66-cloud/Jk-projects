@@ -34,8 +34,10 @@
       button.setAttribute("data-lightbox", "");
       button.setAttribute("data-src", source);
       button.setAttribute("aria-label", "View " + label);
+      button.setAttribute("data-i18n-aria-label", "viewGalleryPhoto");
       image.src = source;
       image.alt = label;
+      image.setAttribute("data-i18n-alt", "galleryPhotoAlt");
       image.loading = index < 6 ? "eager" : "lazy";
       image.decoding = "async";
       const matchImageRatio = () => {
@@ -50,6 +52,7 @@
       card.classList.add("has-photo");
     } else {
       card.setAttribute("aria-label", "Empty gallery photo area " + (index + 1));
+      card.setAttribute("data-i18n-aria-label", "emptyGallerySlot");
       card.style.setProperty("--gallery-ratio", blankRatios[index % blankRatios.length]);
     }
 
