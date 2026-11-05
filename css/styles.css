@@ -478,6 +478,7 @@ select {
   align-items: stretch;
   padding: 8px 12px 28px;
   z-index: 50;
+  
 }
 
 .bottom-nav a {
@@ -489,7 +490,7 @@ select {
   gap: 4px;
   min-width: 0;
   color: var(--muted-2);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 500;
 }
 
