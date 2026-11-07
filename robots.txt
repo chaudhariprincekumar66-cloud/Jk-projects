@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jk-machinery.vercel.app/sitemap.xml

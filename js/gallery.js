@@ -28,7 +28,7 @@
       const button = document.createElement("button");
       const image = document.createElement("img");
       const source = "image/image " + imageNumber + ".png";
-      const label = "Gallery photo " + (index + 1);
+      const label = "Agricultural machinery and welding project photo " + (index + 1);
       button.type = "button";
       button.className = "gallery-photo";
       button.setAttribute("data-lightbox", "");
