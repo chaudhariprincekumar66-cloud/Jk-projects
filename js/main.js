@@ -244,7 +244,8 @@
       chooseLanguage: "Choose language", chatWhatsApp: "Chat on WhatsApp", contactFormNote: "Message delivery will be enabled when a contact service is connected.",
       cropWheatPaddy: "Wheat & Paddy", soilTillage: "Soil Tillage", fieldPreparation: "Field Prep", transport: "Transport",
       arcWelding: "Arc Welding", metalFabrication: "Metal Fabrication", customParts: "Custom Parts", repairs: "Repairs",
-      galleryPhotos: "Gallery photos", galleryPhotoPreview: "Gallery photo preview", closePhotoPreview: "Close photo preview"
+      galleryPhotos: "Gallery photos", galleryPhotoPreview: "Gallery photo preview", closePhotoPreview: "Close photo preview",
+      productListHeading: "Agricultural machinery and fabrication products"
     },
     hi: {
       skipContent: "मुख्य सामग्री पर जाएँ", backHome: "होम पर वापस जाएँ", backProfile: "प्रोफ़ाइल पर वापस जाएँ",
@@ -293,7 +294,8 @@
       chooseLanguage: "भाषा चुनें", chatWhatsApp: "WhatsApp पर संदेश करें", contactFormNote: "संपर्क सेवा जुड़ने पर संदेश भेजने की सुविधा उपलब्ध होगी।",
       cropWheatPaddy: "गेहूँ और धान", soilTillage: "मिट्टी की जुताई", fieldPreparation: "खेत की तैयारी", transport: "परिवहन",
       arcWelding: "आर्क वेल्डिंग", metalFabrication: "धातु निर्माण", customParts: "कस्टम पुर्ज़े", repairs: "मरम्मत",
-      galleryPhotos: "गैलरी की तस्वीरें", galleryPhotoPreview: "गैलरी तस्वीर का पूर्वावलोकन", closePhotoPreview: "तस्वीर का पूर्वावलोकन बंद करें"
+      galleryPhotos: "गैलरी की तस्वीरें", galleryPhotoPreview: "गैलरी तस्वीर का पूर्वावलोकन", closePhotoPreview: "तस्वीर का पूर्वावलोकन बंद करें",
+      productListHeading: "कृषि मशीनरी और फैब्रिकेशन उत्पाद"
     },
     gu: {
       skipContent: "મુખ્ય સામગ્રી પર જાઓ", backHome: "હોમ પર પાછા જાઓ", backProfile: "પ્રોફાઇલ પર પાછા જાઓ",
@@ -342,7 +344,8 @@
       chooseLanguage: "ભાષા પસંદ કરો", chatWhatsApp: "WhatsApp પર સંદેશ કરો", contactFormNote: "સંપર્ક સેવા જોડાશે ત્યારે સંદેશ મોકલી શકાશે.",
       cropWheatPaddy: "ઘઉં અને ડાંગર", soilTillage: "જમીન ખેડાણ", fieldPreparation: "ખેતરની તૈયારી", transport: "પરિવહન",
       arcWelding: "આર્ક વેલ્ડિંગ", metalFabrication: "ધાતુ બનાવટ", customParts: "કસ્ટમ પાર્ટ્સ", repairs: "સમારકામ",
-      galleryPhotos: "ગેલેરીના ફોટા", galleryPhotoPreview: "ગેલેરી ફોટાનું પૂર્વાવલોકન", closePhotoPreview: "ફોટાનું પૂર્વાવલોકન બંધ કરો"
+      galleryPhotos: "ગેલેરીના ફોટા", galleryPhotoPreview: "ગેલેરી ફોટાનું પૂર્વાવલોકન", closePhotoPreview: "ફોટાનું પૂર્વાવલોકન બંધ કરો",
+      productListHeading: "કૃષિ મશીનરી અને ફેબ્રિકેશન ઉત્પાદનો"
     }
   };
   Object.keys(pageStrings).forEach(function (lang) {
@@ -477,6 +480,7 @@
       const modal = document.getElementById("product-modal");
       if (!modal) return;
       modal.querySelector("img").src = card.querySelector("img").src;
+      modal.querySelector("img").alt = card.querySelector("img").alt;
       const nameKey = card.getAttribute("data-i18n-name");
       modal.querySelector("h3").textContent = nameKey ? window.JK.t(nameKey) : card.getAttribute("data-name");
       overlay.classList.add("open");
@@ -489,6 +493,8 @@
       const lb = document.getElementById("lightbox");
       const src = btn.getAttribute("data-src") || btn.querySelector("img").src;
       lb.querySelector("img").src = src;
+      const sourceImage = btn.querySelector("img");
+      lb.querySelector("img").alt = sourceImage ? sourceImage.alt : window.JK.t("galleryPhotoAlt");
       lb.classList.add("open");
     });
   });

@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /profile.html
+Disallow: /personal-information.html
+Disallow: /notifications.html
+Disallow: /language.html
 Sitemap: https://jk-machinery.vercel.app/sitemap.xml
